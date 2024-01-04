@@ -1,6 +1,8 @@
-<?php namespace AamDsam\Bpjs\PCare;
+<?php
 
-use AamDsam\Bpjs\PCare\PcareService;
+namespace Msfiqih\Bpjs\PCare;
+
+use Msfiqih\Bpjs\PCare\PcareService;
 
 class Kunjungan extends PcareService
 {

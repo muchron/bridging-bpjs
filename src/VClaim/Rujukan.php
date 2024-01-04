@@ -1,7 +1,8 @@
 <?php
-namespace AamDsam\Bpjs\VClaim;
 
-use AamDsam\Bpjs\BpjsService;
+namespace Msfiqih\Bpjs\Vclaim;
+
+use Msfiqih\Bpjs\BpjsService;
 
 class Rujukan extends BpjsService
 {
@@ -25,9 +26,9 @@ class Rujukan extends BpjsService
     public function cariByNoRujukan($searchBy, $keyword)
     {
         if ($searchBy == 'RS') {
-            $url = 'Rujukan/RS/'.$keyword;
+            $url = 'Rujukan/RS/' . $keyword;
         } else {
-            $url = 'Rujukan/'.$keyword;
+            $url = 'Rujukan/' . $keyword;
         }
         $response = $this->get($url);
         return json_decode($response, true);
@@ -37,9 +38,9 @@ class Rujukan extends BpjsService
     {
         $record = $multi ? 'List/' : '';
         if ($searchBy == 'RS') {
-            $url = 'Rujukan/RS/Peserta/'.$keyword;
+            $url = 'Rujukan/RS/Peserta/' . $keyword;
         } else {
-            $url = 'Rujukan/'.$record.'Peserta/'.$keyword;
+            $url = 'Rujukan/' . $record . 'Peserta/' . $keyword;
         }
         $response = $this->get($url);
         return json_decode($response, true);
@@ -48,9 +49,9 @@ class Rujukan extends BpjsService
     public function cariByTglRujukan($searchBy, $keyword)
     {
         if ($searchBy == 'RS') {
-            $url = 'Rujukan/RS/TglRujukan/'.$keyword;
+            $url = 'Rujukan/RS/TglRujukan/' . $keyword;
         } else {
-            $url = 'Rujukan/List/Peserta/'.$keyword;
+            $url = 'Rujukan/List/Peserta/' . $keyword;
         }
         $response = $this->get($url);
         return json_decode($response, true);

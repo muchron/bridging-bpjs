@@ -1,6 +1,8 @@
 <?php
-namespace AamDsam\Bpjs\VClaim;
-use AamDsam\Bpjs\BpjsService;
+
+namespace Msfiqih\Bpjs\Vclaim;
+
+use Msfiqih\Bpjs\BpjsService;
 
 class LembarPengajuanKlaim extends BpjsService
 {
@@ -22,7 +24,7 @@ class LembarPengajuanKlaim extends BpjsService
 
     public function cariLPK($tglMasuk, $jnsPelayanan)
     {
-        $response = $this->get('LPK/TglMasuk/'.$tglMasuk.'/JnsPelayanan/'.$jnsPelayanan);
+        $response = $this->get('LPK/TglMasuk/' . $tglMasuk . '/JnsPelayanan/' . $jnsPelayanan);
         return json_decode($response, true);
     }
 }

@@ -18,7 +18,7 @@ BPJS_SCREET_KEY="121212121"
 BPJS_BASE_URL="https://new-api.bpjs-kesehatan.go.id:8080"
 BPJS_SERVICE_NAME="new-vclaim-rest"
 
-use AamDsam\Bpjs\VClaim;
+use Msfiqih\Bpjs\Vclaim;
 
 function vclaim_conf(){
     $config = [
@@ -51,7 +51,7 @@ BPJS_PCARE_APP_CODE="095"
 BPJS_PCARE_BASE_URL="https://dvlp.bpjs-kesehatan.go.id:9081"
 BPJS_PCARE_SERVICE_NAME="pcare-rest-v3.0"
 
-use AamDsam\Bpjs\PCare;
+use Msfiqih\Bpjs\PCare;
 
 function pcare_conf(){
     $config = [

@@ -1,6 +1,6 @@
 {
     "name": "msfiqih/bridging-bpjs",
-    "description": "Package untuk bridging bpjs vclaim, apcare dan pcare -duplicate AamDsam/bridging-bpjs",
+    "description": "Package untuk bridging bpjs vclaim, apcare dan pcare -duplicate Msfiqih/bridging-bpjs",
     "type": "library",
     "license": "MIT",
     "autoload": {
@@ -15,5 +15,8 @@
         }
     ],
     "minimum-stability": "dev",
-    "require": {}
+    "prefer-stable": true,
+    "require": {
+        "guzzlehttp/guzzle": ">=6.0"
+    }
 }

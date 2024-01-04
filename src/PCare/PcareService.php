@@ -1,6 +1,6 @@
 <?php
 
-namespace AamDsam\Bpjs\PCare;
+namespace Msfiqih\Bpjs\PCare;
 
 use GuzzleHttp\Client;
 

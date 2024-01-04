@@ -1,9 +1,11 @@
 <?php
-namespace AamDsam\Bpjs;
+
+namespace Msfiqih\Bpjs;
 
 use GuzzleHttp\Client;
 
-class BpjsService{
+class BpjsService
+{
 
     /**
      * Guzzle HTTP Client object
@@ -61,7 +63,7 @@ class BpjsService{
             'verify' => false
         ]);
 
-        foreach ($configurations as $key => $val){
+        foreach ($configurations as $key => $val) {
             if (property_exists($this, $key)) {
                 $this->$key = $val;
             }
@@ -118,8 +120,8 @@ class BpjsService{
     protected function post($feature, $data = [], $headers = [])
     {
         $this->headers['Content-Type'] = 'application/x-www-form-urlencoded';
-        if(!empty($headers)){
-            $this->headers = array_merge($this->headers,$headers);
+        if (!empty($headers)) {
+            $this->headers = array_merge($this->headers, $headers);
         }
         try {
             $response = $this->clients->request(
@@ -172,5 +174,4 @@ class BpjsService{
         }
         return $response;
     }
-
 }

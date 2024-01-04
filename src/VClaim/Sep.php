@@ -1,6 +1,8 @@
 <?php
-namespace AamDsam\Bpjs\VClaim;
-use AamDsam\Bpjs\BpjsService;
+
+namespace Msfiqih\Bpjs\Vclaim;
+
+use Msfiqih\Bpjs\BpjsService;
 
 class Sep extends BpjsService
 {
@@ -23,13 +25,13 @@ class Sep extends BpjsService
 
     public function cariSEP($keyword)
     {
-        $response = $this->get('SEP/'.$keyword);
+        $response = $this->get('SEP/' . $keyword);
         return json_decode($response, true);
     }
 
     public function suplesiJasaRaharja($noKartu, $tglPelayanan)
     {
-        $response = $this->get('sep/JasaRaharja/Suplesi/'.$noKartu.'/tglPelayanan/'.$tglPelayanan);
+        $response = $this->get('sep/JasaRaharja/Suplesi/' . $noKartu . '/tglPelayanan/' . $tglPelayanan);
         return json_decode($response, true);
     }
     public function pengajuanPenjaminanSep($data = [])
@@ -50,7 +52,7 @@ class Sep extends BpjsService
 
     public function inacbgSEP($keyword)
     {
-        $response = $this->get('sep/cbg/'.$keyword);
+        $response = $this->get('sep/cbg/' . $keyword);
         return json_decode($response, true);
     }
 }
