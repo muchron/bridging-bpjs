@@ -5,7 +5,7 @@ Bridging VClaim
 ### Installation
 
 ```sh
-composer require aamdsam/bridging-bpjs
+composer require muchron/bridging-bpjs
 ```
 
 ### use for VCLAIM
